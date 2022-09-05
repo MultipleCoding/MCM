@@ -1,0 +1,100 @@
+#!/usr/bin/python3
+
+import os
+import time
+
+#Terminal GUI Console
+def main():
+    print("Welcome To Minetest Control Management(MCM)")
+    print("[1]System Console               [2]Backup/Restore")
+    print("[3]System Configs               [4]Software Update")
+    print("{Q} Exit")
+    welcome = input("Type Youre Option: ")
+    
+    if welcome == "1":
+        System_Console()
+    elif welcome == "2":
+        print("Comming Soon")
+        main()
+    elif welcome == "3":
+        print("Comming Soon")
+        main()
+    elif welcome == "4":
+        print("Comming Soon")
+        main()
+    elif welcome == "Q" or welcome == "q":
+        os.system("clear")
+        print("Come Back Soon")
+    else:
+        system("clear")
+        main()
+
+#System Console
+def System_Console():
+    os.system("clear")
+    print("[1] Start                  [2]Stop")
+    print("[3] View Console           [4]Main Menu")
+    console = input("Type Youre Option: ")
+
+#Start Minetest (Please Change Script path if using ln -s)
+    if console == "1":
+        os.system("clear")
+        os.system("screen -dmS Minetest -m bash /home/darkwar/Desktop/minetest/bin/Start.sh")
+        System_Console()
+
+#Stop Minetest
+    elif console == "2":
+        os.system("clear")
+        os.system("screen -XS Minetest quit")
+        os.system("clear")
+        System_Console()
+
+#Views Minetest Console    
+    elif console == "3":
+        os.system("clear")
+        print("To Exit Ctrl + a Ctrl + D")
+        time.sleep(4)
+        os.system("screen -r Minetest")
+        System_Console()
+    
+#Goes Back to Main Menu    
+    elif console == "4":
+        os.system("clear")
+        main()
+        
+    else:
+        os.system("clear")
+        main()
+        
+#Backup And Restore System
+def BRS():
+    print("Welcome To Backup And Restore")
+    print("[1]Backup          [2]Restore")
+    print("{Q} Main Menu")
+    brs = input("Enter Option: ")
+    if brs == "1":
+        os.system("")
+        os.system("")
+        os.system("")
+        os.system("")
+        os.system("")
+        brs()
+    elif brs == "2":
+        os.system("")
+        os.system("")
+        os.system("")
+        os.system("")
+        brs()
+    else:
+        os.system("clear")
+        main()
+
+
+
+
+#Start Up Menu
+#Setting Log
+#Backup Menu
+#Software Update Menu
+#Minetest functions(config,auto mod add|config,player_list)
+main()
