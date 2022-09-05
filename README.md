@@ -1,4 +1,4 @@
-# Join
+# MCM
 Installtion:
 First off Move Start.sh into /bin folder and open it and fix the dir path
 Secound Open up Start.py File and edit the Directory Path where says symbolic Link
