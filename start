@@ -5,6 +5,7 @@ import time
 
 #Terminal GUI Console
 def main():
+    os.system("clear")
     print("Welcome To Minetest Control Management(MCM)")
     print("[1]System Console               [2]Backup/Restore")
     print("[3]System Configs               [4]Software Update")
@@ -14,7 +15,8 @@ def main():
     if welcome == "1":
         System_Console()
     elif welcome == "2":
-        print("Comming Soon")
+        os.system("clear")
+        BRS()
         main()
     elif welcome == "3":
         print("Comming Soon")
@@ -24,7 +26,7 @@ def main():
         main()
     elif welcome == "Q" or welcome == "q":
         os.system("clear")
-        print("Come Back Soon")
+        print("Thank You For Using MCM")
     else:
         system("clear")
         main()
@@ -73,18 +75,15 @@ def BRS():
     print("{Q} Main Menu")
     brs = input("Enter Option: ")
     if brs == "1":
-        os.system("")
-        os.system("")
-        os.system("")
-        os.system("")
-        os.system("")
-        brs()
+        os.system("clear")
+        os.system("bash backup.sh")
+        os.system("clear")
+        BRS()
     elif brs == "2":
-        os.system("")
-        os.system("")
-        os.system("")
-        os.system("")
-        brs()
+        os.system("clear")
+        os.system("bash restore.sh")
+        os.system("clear")
+        BRS()
     else:
         os.system("clear")
         main()
