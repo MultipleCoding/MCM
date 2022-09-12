@@ -1,6 +1,7 @@
+#!/usr/bin/bash
 while true
 do
-cd /home/darkwar/Desktop/minetest/bin
+cd ~/Desktop/minetest/bin
 ./minetestserver
 sleep 10
 done
