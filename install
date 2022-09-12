@@ -1,5 +1,5 @@
 ﻿#!/usr/bin/bash
-sudo apt install -y git cmake make screen python3 g++ make libc6-dev cmake libpng-dev libjpeg-dev libxi-dev libgl1-mesa-dev libsqlite3-dev libogg-dev libvorbis-dev libopenal-dev libcurl4-gnutls-dev libfreetype6-dev zlib1g-dev libgmp-dev libjsoncpp-dev libzstd-dev libluajit-5.1-dev
+sudo apt install -y git cmake make ssh openssh-clent openssh-server screen python3 g++ make libc6-dev cmake libpng-dev libjpeg-dev libxi-dev libgl1-mesa-dev libsqlite3-dev libogg-dev libvorbis-dev libopenal-dev libcurl4-gnutls-dev libfreetype6-dev zlib1g-dev libgmp-dev libjsoncpp-dev libzstd-dev libluajit-5.1-dev
 cd ~/Desktop/
 git clone https://github.com/minetest/minetest.git
 cd ~/Desktop/minetest
