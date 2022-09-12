@@ -1,7 +1,7 @@
-#!/usr/bin/bash
+﻿#!/usr/bin/bash
 #Current Date
 backuptime=$(date '+%b-%d-%y')
-destination=~/Desktop/MCM/Backup/$backuptime.tar.gz
+destination=~/Desktop/minetest/MCM/Backup/$backuptime.tar.gz
 sourcefolder=~/Desktop/
 
 #Tars the File
