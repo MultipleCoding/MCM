@@ -1,15 +1,23 @@
 ﻿#!/usr/bin/bash
-sudo apt install -y git cmake make ssh openssh-clent openssh-server screen python3 g++ make libc6-dev cmake libpng-dev libjpeg-dev libxi-dev libgl1-mesa-dev libsqlite3-dev libogg-dev libvorbis-dev libopenal-dev libcurl4-gnutls-dev libfreetype6-dev zlib1g-dev libgmp-dev libjsoncpp-dev libzstd-dev libluajit-5.1-dev
+sudo apt install -y cmake make ssh openssh-client openssh-server screen python3 g++ make libc6-dev cmake libpng-dev libjpeg-dev libxi-dev libgl1-mesa-dev libsqlite3-dev libogg-dev libvorbis-dev libopenal-dev libcurl4-gnutls-dev libfreetype6-dev zlib1g-dev libgmp-dev libjsoncpp-dev libzstd-dev libluajit-5.1-dev postgresql
 cd ~/Desktop/
 git clone https://github.com/minetest/minetest.git
 cd ~/Desktop/minetest
 git clone --depth 1 https://github.com/minetest/minetest_game.git games/minetest_game
 git clone --depth 1 https://github.com/minetest/irrlicht.git lib/irrlichtmt
-cmake . -DRUN_IN_PLACE=TRUE -DBUILD_SERVER=TRUE -DBUILD_CLIENT=TRUE
+cmake . -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Alienware -DBUILD_SERVER=TRUE -DENABLE_PROMETHEUS=FALSE -DBUILD_UNITTESTS=FALSE -DENABLE_POSTGRESQL=TRUE -DEVERSION_EXTRA=postgres -DBUILD_CLIENT=FALSE 
 make -j$(nproc)
+make install
 mv ~/Desktop/MCM ~/Desktop/minetest
 sudo ln ~/Desktop/minetest/MCM/start /usr/local/bin
 cd ~/Desktop/minetest/MCM/
-#rm -fr install.sh README.md 
 mv ~/Desktop/minetest/MCM/Start.sh ~/Desktop/minetest/bin
-sudo systemctl enable start
+crontab -l | { cat; echo "0 1 * * * bash ~/Desktop/minetest/MCM/backup.sh"; } | crontab -
+
+
+
+
+
+
+#cd ~/Desktop/minetest/MCM
+#rm -fr install.sh README.md 

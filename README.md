@@ -1,7 +1,8 @@
 # MCM
 Installtion:
 chmod +x install
-open Terminal and type Start
+./install
+start
 
 Decription
 Its a all in one software made for a easy clean setup and mangment for noobies its 99% Python and 1% Bash 

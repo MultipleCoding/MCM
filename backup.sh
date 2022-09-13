@@ -1,5 +1,3 @@
-﻿#!/usr/bin/bash
-
 #Current Date
 backuptime=$(date '+%b-%d-%y')
 destination=~/Desktop/minetest/MCM/Backup/$backuptime.tar.gz
@@ -8,7 +6,7 @@ sourcefolder=~/Desktop/minetest
 #Dont Touch anything Below this
 
 #Makes Backup folder if it doesnt exist
-find $BACKUP | mkdir -p Backup
+mkdir -p ~/Desktop/minetest/MCM/Backup
 
 #Tars the File
 tar -cpzf $destination $sourcefolder

@@ -15,12 +15,9 @@ def main():
     if welcome == "1":
         System_Console()
     elif welcome == "2":
-        os.system("clear")
         BRS()
-        main()
     elif welcome == "3":
-        print("Comming Soon")
-        main()
+        SC()
     elif welcome == "4":
         print("Comming Soon")
         main()
@@ -29,7 +26,7 @@ def main():
         print("Thank You For Using MCM")
     else:
         system("clear")
-        main()
+        break
 
 #System Console
 def System_Console():
@@ -70,6 +67,7 @@ def System_Console():
         
 #Backup And Restore System
 def BRS():
+    os.system("clear")
     print("Welcome To Backup And Restore")
     print("[1]Backup          [2]Restore")
     print("{Q} Main Menu")
@@ -87,13 +85,50 @@ def BRS():
     else:
         os.system("clear")
         main()
+def SC():
+    os.system("clear")
+    print("Welcome To System Configs")
+    print("[1] Adding Mods       [2]Removing Mods")
+    print("[3] Minetest.conf     [4]World.mt")
+    print("[5] Adding Textures   {Q} Exit")
+    sc = input("Enter Option: ")
+    if sc == "1":
+        print("Paste Mod File here")
+        url = input("Enter url: ")
+        link = "cd ~/Desktop/minetest/mods && git clone "+url
+        os.system(link)
+        time.sleep(1)
+        print("Please Reboot the Server\n Dont Forget to Edit the world.mt file")
+        time.sleep(2)
+        SC()
+    elif sc == "2":
+       print("Copy And Paste the Mod you dont want")
+       time.sleep(1)
+       os.system("ls ~/Desktop/minetest/mods")
+       mod = input("Mod Name here: ")
+       remove = "rm -fr ~/Desktop/minetest/mod "+mod
+       os.system(remove)
+       SC()
+    elif sc == "3":
+        os.system("nano ~/Desktop/minetest/minetest.conf")
+        SC()
+    elif sc == "4":
+        os.system("nano ~/Desktop/minetest/worlds/world/world.mt")
+    elif sc == "5":
+        print("Paste Texture Here")
+        url = input("Enter url: ")
+        link = "cd ~/Desktop/minetest/textures && git clone "+url
+        os.system(link)
+        SC()
+    else:
+        os.system("clear")
+        main()
+def Upgrade():
+    os.system("sudo apt update && sudo apt upgrade")
+    for filename in os.listdir('~/Desktop/minetest'):
+        callthecommandhere(blablahbla, filename, foo)
 
 
 
-
-#Start Up Menu
-#Setting Log
-#Backup Menu
 #Software Update Menu
-#Minetest functions(config,auto mod add|config,player_list)
-main()
+
