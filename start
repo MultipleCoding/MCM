@@ -19,8 +19,7 @@ def main():
     elif welcome == "3":
         SC()
     elif welcome == "4":
-        print("Comming Soon")
-        main()
+        Upgrade()
     elif welcome == "Q" or welcome == "q":
         os.system("clear")
         print("Thank You For Using MCM")
@@ -125,8 +124,7 @@ def SC():
         main()
 def Upgrade():
     os.system("sudo apt update && sudo apt upgrade")
-    for filename in os.listdir('~/Desktop/minetest'):
-        callthecommandhere(blablahbla, filename, foo)
+    os.system("bash updater.sh")
 
 
 
