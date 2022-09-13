@@ -2,6 +2,6 @@
 while true
 do
 cd ~/Desktop/minetest/bin
-./minetestserver
+./minetestserver --gameid minetest --worldname world
 sleep 10
 done
