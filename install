@@ -7,7 +7,6 @@ git clone --depth 1 https://github.com/minetest/minetest_game.git games/minetest
 git clone --depth 1 https://github.com/minetest/irrlicht.git lib/irrlichtmt
 cmake . -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Alienware -DBUILD_SERVER=TRUE -DENABLE_PROMETHEUS=FALSE -DBUILD_UNITTESTS=FALSE -DENABLE_POSTGRESQL=TRUE -DEVERSION_EXTRA=postgres -DBUILD_CLIENT=FALSE 
 make -j$(nproc)
-make install
 mv ~/Desktop/MCM ~/Desktop/minetest
 sudo ln ~/Desktop/minetest/MCM/start /usr/local/bin
 cd ~/Desktop/minetest/MCM/
