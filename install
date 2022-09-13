@@ -14,4 +14,5 @@ cd ~/Desktop/minetest/MCM/
 mv ~/Desktop/minetest/MCM/Start.sh ~/Desktop/minetest/bin
 crontab -l | { cat; echo "0 1 * * * bash ~/Desktop/minetest/MCM/backup.sh"; } | crontab -
 cd ~/Desktop/minetest/MCM
+sudo chmod +x start
 rm -fr install.sh README.md 
