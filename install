@@ -1,4 +1,3 @@
-﻿#!/usr/bin/bash
 sudo apt install -y cmake make ssh openssh-client openssh-server screen python3 g++ make libc6-dev cmake libpng-dev libjpeg-dev libxi-dev libgl1-mesa-dev libsqlite3-dev libogg-dev libvorbis-dev libopenal-dev libcurl4-gnutls-dev libfreetype6-dev zlib1g-dev libgmp-dev libjsoncpp-dev libzstd-dev libluajit-5.1-dev postgresql
 cd ~/Desktop/
 git clone https://github.com/minetest/minetest.git
