@@ -14,3 +14,4 @@ crontab -l | { cat; echo "0 1 * * * bash ~/Desktop/minetest/MCM/backup.sh"; } | 
 cd ~/Desktop/minetest/MCM
 chmod +x start
 rm -fr install.sh README.md 
+sudo apt autoremove
