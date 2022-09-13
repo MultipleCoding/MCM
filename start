@@ -14,18 +14,21 @@ def main():
     
     if welcome == "1":
         System_Console()
+        main()
     elif welcome == "2":
         BRS()
+        main()
     elif welcome == "3":
         SC()
+        main()
     elif welcome == "4":
         Upgrade()
+        main()
     elif welcome == "Q" or welcome == "q":
         os.system("clear")
         print("Thank You For Using MCM")
     else:
         system("clear")
-        break
 
 #System Console
 def System_Console():
@@ -105,8 +108,10 @@ def SC():
        time.sleep(1)
        os.system("ls ~/Desktop/minetest/mods")
        mod = input("Mod Name here: ")
-       remove = "rm -fr ~/Desktop/minetest/mod "+mod
+       remove = "rm -fr ~/Desktop/minetest/mods/"+mod
        os.system(remove)
+       os.system("ls ~/Desktop/minetest/mods")
+       time.sleep(1)
        SC()
     elif sc == "3":
         os.system("nano ~/Desktop/minetest/minetest.conf")
@@ -127,6 +132,5 @@ def Upgrade():
     os.system("bash updater.sh")
 
 
-
-#Software Update Menu
+main()
 
