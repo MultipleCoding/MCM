@@ -13,11 +13,5 @@ sudo ln ~/Desktop/minetest/MCM/start /usr/local/bin
 cd ~/Desktop/minetest/MCM/
 mv ~/Desktop/minetest/MCM/Start.sh ~/Desktop/minetest/bin
 crontab -l | { cat; echo "0 1 * * * bash ~/Desktop/minetest/MCM/backup.sh"; } | crontab -
-
-
-
-
-
-
-#cd ~/Desktop/minetest/MCM
-#rm -fr install.sh README.md 
+cd ~/Desktop/minetest/MCM
+rm -fr install.sh README.md 
